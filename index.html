@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PlutoTech Yellow Theme</title>
 
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -13,7 +16,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 body {
@@ -44,7 +47,7 @@ header {
 
 .logo {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 600;
 }
 .logo span {
   color: #ffd700;
@@ -58,20 +61,23 @@ header {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 90px 20px;
 }
 
 .tag {
   color: #ffd700;
   border: 1px solid #ffd700;
-  padding: 5px 15px;
+  padding: 6px 16px;
   display: inline-block;
   border-radius: 20px;
   margin-bottom: 20px;
+  font-size: 13px;
+  letter-spacing: 1px;
 }
 
 .hero h1 {
-  font-size: 45px;
+  font-size: 50px;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -80,19 +86,20 @@ header {
 }
 
 .desc {
-  margin: 20px 0;
+  margin: 20px auto;
   color: #aaa;
   max-width: 500px;
-  margin-inline: auto;
+  font-size: 15px;
 }
 
 .buttons button {
-  padding: 12px 20px;
+  padding: 12px 22px;
   margin: 10px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: 500;
 }
 
 .primary {
@@ -115,12 +122,13 @@ header {
 
 /* SERVICES */
 .services {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .services h2 {
   margin-bottom: 30px;
+  font-weight: 600;
 }
 
 .card {
@@ -133,14 +141,14 @@ header {
   transition: 0.3s;
 }
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   box-shadow: 0 0 20px rgba(255,215,0,0.3);
 }
 
 /* TEAM */
 .team {
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 20px;
 }
 
 /* FOUNDER CARD */
@@ -168,11 +176,12 @@ header {
 
 .founder-card h3 {
   font-size: 22px;
+  font-weight: 600;
 }
 
 .role {
   color: #ffd700;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 2px;
   margin: 5px 0 10px;
 }
@@ -208,7 +217,7 @@ header {
 
 /* STATS */
 .stats {
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 .box {
@@ -231,8 +240,8 @@ header {
 /* FOOTER */
 .footer {
   text-align: center;
-  padding: 60px 20px;
-  font-size: 24px;
+  padding: 70px 20px;
+  font-size: 26px;
   color: #ffd700;
 }
 </style>
