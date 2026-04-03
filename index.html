@@ -3,12 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PlutoTech</title>
+<title>PlutoTech Yellow Theme</title>
 
-<!-- Font -->
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -23,10 +20,10 @@ html { scroll-behavior: smooth; }
 
 body {
   background: #0a0a00;
-  color: white;
+  color: #fff;
 }
 
-/* GRID BACKGROUND */
+/* GRID BG */
 body::before {
   content: "";
   position: fixed;
@@ -41,7 +38,7 @@ body::before {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 100px 20px;
+  padding: 90px 20px;
 }
 
 .tag {
@@ -51,16 +48,14 @@ body::before {
   border-radius: 20px;
   display: inline-block;
   margin-bottom: 20px;
-  font-size: 13px;
 }
 
 .hero h1 {
-  font-size: 52px;
-  font-weight: 700;
+  font-size: 50px;
 }
 
 .hero h1 span {
-  color: #aaa;
+  color: #ccc;
 }
 
 .desc {
@@ -69,19 +64,14 @@ body::before {
   max-width: 500px;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .primary {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 12px 22px;
   background: #ffd700;
   color: black;
   border-radius: 8px;
   text-decoration: none;
-  margin-top: 10px;
-  transition: 0.3s;
-}
-.primary:hover {
-  box-shadow: 0 0 20px #ffd700;
 }
 
 /* WHO WE ARE */
@@ -89,22 +79,15 @@ body::before {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   padding: 80px 20px;
-  gap: 50px;
+  gap: 40px;
 }
 
 .about img {
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
   border-radius: 12px;
   border: 2px solid #ffd700;
-  transition: 0.3s;
-}
-
-.about img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 25px rgba(255,215,0,0.3);
 }
 
 .about-text {
@@ -112,19 +95,18 @@ body::before {
 }
 
 .about-text h2 {
-  font-size: 32px;
   margin-bottom: 15px;
 }
 
 .about-text p {
   color: #aaa;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 /* TEAM */
 .team {
   text-align: center;
-  padding: 80px 20px;
+  padding: 70px 20px;
 }
 
 .founder-card {
@@ -134,25 +116,12 @@ body::before {
   padding: 30px;
   max-width: 350px;
   margin: auto;
-  transition: 0.3s;
-}
-
-.founder-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(255,215,0,0.3);
 }
 
 .founder-card img {
   width: 120px;
   border-radius: 50%;
   border: 3px solid #ffd700;
-  margin-bottom: 10px;
-}
-
-.role {
-  color: #ffd700;
-  font-size: 12px;
-  letter-spacing: 2px;
 }
 
 .socials {
@@ -160,68 +129,44 @@ body::before {
 }
 
 .socials a {
-  display: inline-block;
-  margin: 6px;
-  padding: 10px;
-  border-radius: 50%;
-  border: 1px solid #333300;
+  margin: 5px;
   color: #ffd700;
-  transition: 0.3s;
-}
-
-.socials a:hover {
-  background: #ffd700;
-  color: black;
-}
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 80px 20px;
-  font-size: 24px;
-  color: #ffd700;
+  font-size: 18px;
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
-  <p class="tag">BUILT WITH CARE. POWERED BY CODE.</p>
+  <p class="tag">BUILT WITH CARE</p>
   <h1>Clean Code.<br><span>Real Impact.</span></h1>
-  <p class="desc">
-    We build websites, apps, bots, and automation tools that help your ideas grow.
-  </p>
-
+  <p class="desc">We build websites, apps, and bots.</p>
   <a href="#team" class="primary">Meet Our Team →</a>
 </section>
 
-<!-- WHO WE ARE -->
+<!-- WHO WE ARE SECTION -->
 <section class="about">
-  <img src="https://i.imgur.com/8Km9tLL.png" alt="Team">
+  <img src="https://i.imgur.com/8Km9tLL.png" alt="Team Image">
 
   <div class="about-text">
     <h2>Who We Are</h2>
     <p>
-      We are a passionate team of developers focused on building modern digital solutions.
+      We are a team of developers passionate about building clean and powerful digital products.
     </p>
     <p>
-      From websites to Discord bots and automation tools, we turn ideas into powerful products.
+      From websites to automation bots, we turn ideas into reality with modern design and strong backend logic.
     </p>
   </div>
 </section>
 
 <!-- TEAM -->
 <section class="team" id="team">
-  <h2>Meet The Founder</h2>
+  <h2>Founder</h2>
 
   <div class="founder-card">
     <img src="https://i.imgur.com/6VBx3io.png">
-
     <h3>Raghurai</h3>
-    <p class="role">FOUNDER</p>
 
     <div class="socials">
       <a href="#"><i class="fab fa-discord"></i></a>
@@ -229,11 +174,6 @@ body::before {
       <a href="#"><i class="fab fa-github"></i></a>
     </div>
   </div>
-</section>
-
-<!-- FOOTER -->
-<section class="footer">
-  <h2>Got an idea?<br>Let’s build it.</h2>
 </section>
 
 </body>
