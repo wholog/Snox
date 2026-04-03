@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PlutoTech Yellow Theme</title>
+<title>Snox</title>
 
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,6 +12,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -92,28 +96,33 @@ header {
   font-size: 15px;
 }
 
-.buttons button {
-  padding: 12px 22px;
-  margin: 10px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: 500;
+/* BUTTONS */
+.buttons a {
+  text-decoration: none;
 }
 
 .primary {
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 10px;
+  border-radius: 8px;
   background: #ffd700;
   color: black;
+  font-weight: 500;
+  transition: 0.3s;
 }
 .primary:hover {
   box-shadow: 0 0 20px #ffd700;
 }
 
 .secondary {
-  background: transparent;
+  display: inline-block;
+  padding: 12px 22px;
+  margin: 10px;
+  border-radius: 8px;
   border: 1px solid #ffd700;
   color: #ffd700;
+  transition: 0.3s;
 }
 .secondary:hover {
   background: #ffd700;
@@ -128,7 +137,6 @@ header {
 
 .services h2 {
   margin-bottom: 30px;
-  font-weight: 600;
 }
 
 .card {
@@ -174,22 +182,15 @@ header {
   margin-bottom: 15px;
 }
 
-.founder-card h3 {
-  font-size: 22px;
-  font-weight: 600;
-}
-
 .role {
   color: #ffd700;
   font-size: 12px;
   letter-spacing: 2px;
-  margin: 5px 0 10px;
 }
 
 .bio {
-  font-size: 14px;
   color: #aaa;
-  margin-bottom: 15px;
+  margin: 10px 0;
 }
 
 /* SOCIAL ICONS */
@@ -251,7 +252,6 @@ header {
 
 <header>
   <div class="logo">Pluto<span>Tech</span></div>
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
 <section class="hero">
@@ -262,8 +262,8 @@ header {
   </p>
 
   <div class="buttons">
-    <button class="primary">Meet Our Team →</button>
-    <button class="secondary">Get In Touch</button>
+    <a href="#team" class="primary">Meet Our Team →</a>
+    <a href="#" class="secondary">Get In Touch</a>
   </div>
 </section>
 
@@ -281,7 +281,8 @@ header {
   </div>
 </section>
 
-<section class="team">
+<!-- TEAM SECTION WITH ID -->
+<section class="team" id="team">
   <h2>Meet The Founders</h2>
 
   <div class="founder-card">
