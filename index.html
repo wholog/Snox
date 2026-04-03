@@ -57,11 +57,6 @@ header {
   color: #ffd700;
 }
 
-.menu-btn {
-  font-size: 24px;
-  cursor: pointer;
-}
-
 /* HERO */
 .hero {
   text-align: center;
@@ -245,6 +240,42 @@ header {
   font-size: 26px;
   color: #ffd700;
 }
+
+/* CONTACT BUTTONS */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 40px 20px 80px;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: #141400;
+  border: 1px solid #333300;
+  color: #ffd700;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.3s;
+  min-width: 160px;
+  justify-content: center;
+}
+
+.contact-btn i {
+  font-size: 18px;
+}
+
+.contact-btn:hover {
+  background: #ffd700;
+  color: black;
+  box-shadow: 0 0 20px #ffd700;
+  transform: translateY(-3px);
+}
 </style>
 
 </head>
@@ -281,7 +312,6 @@ header {
   </div>
 </section>
 
-<!-- TEAM SECTION WITH ID -->
 <section class="team" id="team">
   <h2>Meet The Founders</h2>
 
@@ -311,6 +341,21 @@ header {
 
 <section class="footer">
   <h2>Got an idea?<br>Let’s build it.</h2>
+</section>
+
+<!-- NEW BUTTONS -->
+<section class="contact-buttons">
+  <a href="https://instagram.com/" target="_blank" class="contact-btn">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+
+  <a href="https://discord.gg/" target="_blank" class="contact-btn">
+    <i class="fab fa-discord"></i> Discord
+  </a>
+
+  <a href="#" class="contact-btn">
+    <i class="fas fa-user-plus"></i> Invite Me
+  </a>
 </section>
 
 <script>
