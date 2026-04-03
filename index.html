@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PlutoTech Yellow Theme</title>
 
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 * {
   margin: 0;
@@ -180,24 +183,27 @@ header {
   margin-bottom: 15px;
 }
 
+/* SOCIAL ICONS */
 .socials {
   display: flex;
   justify-content: center;
   gap: 15px;
 }
 
-.socials span {
+.socials a {
   background: #1a1a00;
   border: 1px solid #333300;
-  padding: 10px;
+  padding: 12px;
   border-radius: 50%;
-  cursor: pointer;
+  color: #ffd700;
+  font-size: 18px;
   transition: 0.3s;
 }
 
-.socials span:hover {
+.socials a:hover {
   background: #ffd700;
   color: black;
+  transform: scale(1.1);
 }
 
 /* STATS */
@@ -280,9 +286,9 @@ header {
     </p>
 
     <div class="socials">
-      <span>🌐</span>
-      <span>💻</span>
-      <span>📸</span>
+      <a href="https://discord.gg/" target="_blank"><i class="fab fa-discord"></i></a>
+      <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
     </div>
   </div>
 </section>
