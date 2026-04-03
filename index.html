@@ -634,7 +634,7 @@ const observer = new IntersectionObserver(entries=>{
 },{threshold:0.3});
 faders.forEach(f=>observer.observe(f));
 /* ===== Live Discord Status ===== */
-const userId = "1277142365236105257"; // <-- Put your Discord User ID here
+const userId = "1487291654862803014"; // <-- Put your Discord User ID here
 
 async function fetchDiscordStatus() {
     try {
@@ -816,7 +816,7 @@ async function loadGitHubProjects() {
         repos.sort((a, b) => b.stargazers_count - a.stargazers_count);
 
         // Take top 4 repos
-        repos = repos.slice(0, 4);
+        repos = repos.slice(0, 3);
 
         container.innerHTML = "";
 
