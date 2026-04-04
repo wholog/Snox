@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SnoX</title>
+<title>PlutoTech Yellow Theme</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -12,245 +12,231 @@
 
 /* RESET */
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Space Grotesk',sans-serif;
-  -webkit-tap-highlight-color:transparent;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Space Grotesk',sans-serif;
 }
 
 body{
-  background:#0a0a00;
-  color:#fff;
+background:#0a0a00;
+color:#fff;
+overflow-x:hidden;
 }
 
 /* GRID BACKGROUND */
 body::before{
-  content:"";
-  position:fixed;
-  width:100%;
-  height:100%;
-  background-image:linear-gradient(#1a1a00 1px,transparent 1px),
-                   linear-gradient(90deg,#1a1a00 1px,transparent 1px);
-  background-size:40px 40px;
-  z-index:-1;
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background-image:linear-gradient(#1a1a00 1px,transparent 1px),
+linear-gradient(90deg,#1a1a00 1px,transparent 1px);
+background-size:40px 40px;
+z-index:-1;
 }
 
 /* NAV */
 header{
-  display:flex;
-  justify-content:space-between;
-  padding:15px 25px;
-  border-bottom:1px solid #333300;
+display:flex;
+justify-content:space-between;
+padding:15px 25px;
+border-bottom:1px solid #333300;
 }
 
 .logo{
-  font-size:22px;
-  font-weight:600;
+font-size:22px;
+font-weight:600;
 }
-.logo span{
-  color:#ffd700;
-}
+.logo span{color:#ffd700;}
 
 /* HERO */
 .hero{
-  text-align:center;
-  padding:90px 20px;
+text-align:center;
+padding:90px 20px;
 }
 
 .tag{
-  color:#ffd700;
-  border:1px solid #ffd700;
-  padding:6px 16px;
-  border-radius:20px;
-  margin-bottom:20px;
-  display:inline-block;
+color:#ffd700;
+border:1px solid #ffd700;
+padding:6px 16px;
+display:inline-block;
+border-radius:20px;
+margin-bottom:20px;
+font-size:13px;
 }
 
 .hero h1{
-  font-size:50px;
-}
-.hero span{
-  color:#ccc;
+font-size:50px;
+line-height:1.2;
 }
 
+.hero h1 span{color:#ccc;}
+
 .desc{
-  color:#aaa;
-  margin:20px auto;
-  max-width:500px;
+margin:20px auto;
+color:#aaa;
+max-width:500px;
 }
 
 /* BUTTONS */
-.primary, .secondary{
-  padding:12px 22px;
-  margin:10px;
-  border-radius:8px;
-  text-decoration:none;
+.primary{
+display:inline-block;
+padding:12px 22px;
+margin:10px;
+border-radius:8px;
+background:#ffd700;
+color:black;
+text-decoration:none;
 }
 
-.primary{
-  background:#ffd700;
-  color:black;
-}
 .secondary{
-  border:1px solid #ffd700;
-  color:#ffd700;
+display:inline-block;
+padding:12px 22px;
+margin:10px;
+border-radius:8px;
+border:1px solid #ffd700;
+color:#ffd700;
+text-decoration:none;
 }
 
 /* SERVICES */
 .services{
-  text-align:center;
-  padding:60px 20px;
+padding:60px 20px;
+text-align:center;
 }
 
 .card{
-  background:#141400;
-  border:1px solid #333300;
-  padding:20px;
-  margin:15px auto;
-  border-radius:12px;
-  max-width:400px;
+background:#141400;
+border:1px solid #333300;
+padding:20px;
+margin:15px auto;
+border-radius:12px;
+max-width:400px;
 }
 
 /* TEAM */
 .team{
-  text-align:center;
-  padding:70px 20px;
+text-align:center;
+padding:70px 20px;
 }
 
 .founder-card{
-  background:#141400;
-  border:1px solid #333300;
-  border-radius:18px;
-  padding:30px;
-  max-width:350px;
-  margin:auto;
+background:#141400;
+border:1px solid #333300;
+border-radius:18px;
+padding:30px 20px;
+max-width:350px;
+margin:auto;
 }
 
 .founder-card img{
-  width:120px;
-  border-radius:50%;
-  border:3px solid #ffd700;
+width:120px;
+border-radius:50%;
+border:3px solid #ffd700;
+margin-bottom:15px;
 }
 
 .role{
-  color:#ffd700;
-  font-size:12px;
+color:#ffd700;
+font-size:12px;
+letter-spacing:2px;
 }
 
 .bio{
-  color:#aaa;
+color:#aaa;
+margin:10px 0;
 }
 
 .socials{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  margin-top:10px;
+display:flex;
+justify-content:center;
+gap:15px;
 }
 
 .socials a{
-  color:#ffd700;
+background:#1a1a00;
+border:1px solid #333300;
+padding:12px;
+border-radius:50%;
+color:#ffd700;
 }
 
-/* STATS */
-.stats{
-  padding:60px 20px;
+/* ========================= */
+/* 🔥 NEW PLUTOTECH SECTION */
+/* ========================= */
+
+.pluto-section{
+padding:100px 20px;
+text-align:center;
+background:linear-gradient(180deg,#0a0000,#140000,#0a0000);
 }
 
-.box{
-  background:#141400;
-  padding:25px;
-  margin:15px auto;
-  border-radius:12px;
-  text-align:center;
-  color:#ffd700;
+.pluto-section h2{
+font-size:38px;
+line-height:1.3;
+margin-bottom:40px;
 }
 
-/* ============================= */
-/* 🔥 PLUTOTECH CTA SECTION */
-/* ============================= */
-
-.cta-section{
-  padding:100px 20px 60px;
-  text-align:center;
-  background:radial-gradient(circle at top,#1a0000,#0a0000 70%);
+.pluto-section h2 span{
+display:block;
 }
 
-.cta-title{
-  font-size:42px;
-  font-weight:700;
-  color:#eee;
-  margin-bottom:50px;
+/* CONTACT BUTTONS */
+.pluto-buttons{
+display:flex;
+flex-direction:column;
+gap:20px;
+max-width:400px;
+margin:0 auto;
 }
 
-.cta-buttons{
-  display:flex;
-  flex-direction:column;
-  gap:20px;
-  max-width:400px;
-  margin:auto;
+.pluto-btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+padding:16px;
+border-radius:14px;
+background:#140000;
+border:1px solid #330000;
+color:#fff;
+text-decoration:none;
+font-size:16px;
+transition:0.3s;
 }
 
-.cta-btn{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:12px;
-  padding:18px;
-  border-radius:18px;
-  text-decoration:none;
-  color:#ddd;
-  border:1px solid rgba(255,0,0,0.2);
-  background:rgba(255,255,255,0.02);
-  transition:0.3s;
+.pluto-btn:hover{
+background:#ff1a1a;
+transform:translateY(-4px);
+box-shadow:0 0 20px rgba(255,0,0,0.5);
 }
 
-.cta-btn:hover{
-  border:1px solid red;
-  box-shadow:0 0 20px rgba(255,0,0,0.4);
-}
-
-/* ============================= */
-/* 🔻 FOOTER */
-/* ============================= */
-
-.pluto-footer{
-  text-align:center;
-  padding:50px 20px;
-  background:#050000;
+/* FOOTER */
+.footer-bottom{
+text-align:center;
+padding:60px 20px;
+border-top:1px solid #220000;
 }
 
 .footer-logo{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
-}
-
-.footer-logo img{
-  width:40px;
+font-size:26px;
+font-weight:600;
 }
 
 .footer-logo span{
-  color:#ff2b2b;
+color:#ff1a1a;
 }
 
 .footer-text{
-  color:#777;
-  margin:10px 0 25px;
-}
-
-.footer-line{
-  width:80%;
-  height:1px;
-  background:#1a1a1a;
-  margin:20px auto;
+color:#777;
+margin-top:10px;
 }
 
 .copyright{
-  color:#555;
-  font-size:13px;
+color:#555;
+margin-top:20px;
+font-size:14px;
 }
 
 </style>
@@ -259,63 +245,78 @@ header{
 <body>
 
 <header>
-  <div class="logo">Sno<span>X</span></div>
+<div class="logo">Sno<span>x</span></div>
 </header>
 
 <section class="hero">
-  <p class="tag">BUILT WITH CARE. POWERED BY CODE.</p>
-  <h1>Clean Code.<br><span>Real Impact.</span></h1>
-  <p class="desc">We build websites, bots, and apps.</p>
+<p class="tag">BUILT WITH CARE. POWERED BY CODE.</p>
+<h1>Clean Code.<br><span>Real Impact.</span></h1>
+<p class="desc">
+We build websites, apps, bots, and automation tools that help your ideas grow online.
+</p>
+
+<a href="#team" class="primary">Meet Our Team →</a>
+<a href="#contact" class="secondary">Get In Touch</a>
 </section>
 
 <section class="services">
-  <h2>What We Do</h2>
-  <div class="card">Websites</div>
-  <div class="card">Apps</div>
-  <div class="card">Discord Bots</div>
+<h2>What We Do</h2>
+
+<div class="card">
+<h3>Custom Websites</h3>
+<p>Clean, responsive websites made to fit your brand.</p>
+</div>
+
+<div class="card">
+<h3>Web Applications</h3>
+<p>Fast and reliable apps built for real users.</p>
+</div>
+
+<div class="card">
+<h3>Discord Bots</h3>
+<p>Custom bots to manage and grow your community.</p>
+</div>
+
 </section>
 
-<section class="team">
-  <h2>Founder</h2>
-  <div class="founder-card">
-    <img src="https://cdn.discordapp.com/attachments/1411311515197243425/1472178412759154728/IMG_20241103_162603_127.webp">
-    <h3>log8rithm</h3>
-    <p class="role">FOUNDER</p>
-    <p class="bio">Python + Web Dev</p>
-  </div>
+<section class="team" id="team">
+<h2>Meet The Founders</h2>
+
+<div class="founder-card">
+<img src="https://cdn.discordapp.com/attachments/1411311515197243425/1472178412759154728/IMG_20241103_162603_127.webp">
+<h3>log8rithm</h3>
+<p class="role">FOUNDER</p>
+<p class="bio">Where Python logic meets modern design.</p>
+</div>
 </section>
 
-<section class="stats">
-  <div class="box">100+ Projects</div>
-  <div class="box">100% Satisfaction</div>
+<!-- 🔥 NEW PLUTOTECH STYLE SECTION -->
+<section class="pluto-section" id="contact">
+<h2>Got an idea?<br><span>Let’s build it.</span></h2>
+
+<div class="pluto-buttons">
+
+<a href="mailto:your@email.com" class="pluto-btn">
+<i class="fas fa-envelope"></i> Email Us
+</a>
+
+<a href="https://discord.gg/" class="pluto-btn">
+<i class="fab fa-discord"></i> Message on Discord
+</a>
+
+<a href="https://wa.me/" class="pluto-btn">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+</div>
 </section>
 
-<!-- 🔥 CTA SECTION -->
-<section class="cta-section">
-  <h1 class="cta-title">Got an idea?<br>Let’s build it.</h1>
-
-  <div class="cta-buttons">
-    <a href="#" class="cta-btn"><i class="fas fa-envelope"></i>Email Us</a>
-    <a href="#" class="cta-btn"><i class="fab fa-discord"></i>Message on Discord</a>
-    <a href="#" class="cta-btn"><i class="fab fa-whatsapp"></i>WhatsApp</a>
-  </div>
-</section>
-
-<!-- 🔻 FOOTER -->
-<footer class="pluto-footer">
-
-  <div class="footer-logo">
-    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png">
-    <h2>Pluto<span>Tech</span></h2>
-  </div>
-
-  <p class="footer-text">Built with code. Made with purpose.</p>
-
-  <div class="footer-line"></div>
-
-  <p class="copyright">© 2025 PlutoTech. All rights reserved.</p>
-
-</footer>
+<!-- FOOTER -->
+<div class="footer-bottom">
+<div class="footer-logo">Pluto<span>Tech</span></div>
+<p class="footer-text">Built with code. Made with purpose.</p>
+<p class="copyright">© 2025 PlutoTech. All rights reserved.</p>
+</div>
 
 </body>
 </html>
