@@ -1,332 +1,360 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PlutoTech Yellow Theme</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-
-/* RESET */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Space Grotesk',sans-serif;
+<!DOCTYPE html>  <html lang="en">    <head>      <meta charset="UTF-8">      
+<meta name="viewport" content="width=device-width, initial-scale=1.0">      
+<title>PlutoTech Yellow Theme</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">  <!-- Font Awesome Icons -->  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  <style>    /* REMOVE TEXT SELECTION HIGHLIGHT */  
+::selection {  
+background: transparent;  
+}  ::-webkit-selection {
+background: transparent;
 }
 
-body{
-background:#0a0a00;
-color:#fff;
-overflow-x:hidden;
+/* REMOVE TAP HIGHLIGHT COMPLETELY */
+
+{
+-webkit-tap-highlight-color: transparent;
+}
+
+/* REMOVE BLUE CLICK ON LINKS & BUTTONS */
+a, button, div, span {
+-webkit-tap-highlight-color: transparent;
+outline: none;
+}
+
+/* OPTIONAL: DISABLE TEXT SELECT (if you don't want selection at all) */
+body {
+-webkit-user-select: none;
+user-select: none;
+}
+
+/* REMOVE BLUE TAP / CLICK EFFECT */
+
+{
+-webkit-tap-highlight-color: transparent;
+}
+
+/* REMOVE FOCUS OUTLINE */
+a:focus, button:focus {
+outline: none;
+}
+
+/* OPTIONAL: Remove highlight on active click */
+a, button {
+-webkit-tap-highlight-color: transparent;
+}
+html {
+scroll-behavior: smooth;
+}
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+background: #0a0a00;
+color: #fff;
+overflow-x: hidden;
 }
 
 /* GRID BACKGROUND */
-body::before{
-content:"";
-position:fixed;
-width:100%;
-height:100%;
-background-image:linear-gradient(#1a1a00 1px,transparent 1px),
-linear-gradient(90deg,#1a1a00 1px,transparent 1px);
-background-size:40px 40px;
-z-index:-1;
+body::before {
+content: "";
+position: fixed;
+width: 100%;
+height: 100%;
+background-image: linear-gradient(#1a1a00 1px, transparent 1px),
+linear-gradient(90deg, #1a1a00 1px, transparent 1px);
+background-size: 40px 40px;
+z-index: -1;
 }
 
-/* NAV */
-header{
-display:flex;
-justify-content:space-between;
-padding:15px 25px;
-border-bottom:1px solid #333300;
+/* NAVBAR */
+header {
+display: flex;
+justify-content: space-between;
+padding: 15px 25px;
+border-bottom: 1px solid #333300;
 }
 
-.logo{
-font-size:22px;
-font-weight:600;
+.logo {
+font-size: 22px;
+font-weight: 600;
 }
-.logo span{color:#ffd700;}
+.logo span {
+color: #ffd700;
+}
 
 /* HERO */
-.hero{
-text-align:center;
-padding:90px 20px;
+.hero {
+text-align: center;
+padding: 90px 20px;
 }
 
-.tag{
-color:#ffd700;
-border:1px solid #ffd700;
-padding:6px 16px;
-display:inline-block;
-border-radius:20px;
-margin-bottom:20px;
-font-size:13px;
+.tag {
+color: #ffd700;
+border: 1px solid #ffd700;
+padding: 6px 16px;
+display: inline-block;
+border-radius: 20px;
+margin-bottom: 20px;
+font-size: 13px;
+letter-spacing: 1px;
 }
 
-.hero h1{
-font-size:50px;
-line-height:1.2;
+.hero h1 {
+font-size: 50px;
+font-weight: 700;
+line-height: 1.2;
 }
 
-.hero h1 span{color:#ccc;}
+.hero h1 span {
+color: #ccc;
+}
 
-.desc{
-margin:20px auto;
-color:#aaa;
-max-width:500px;
+.desc {
+margin: 20px auto;
+color: #aaa;
+max-width: 500px;
+font-size: 15px;
 }
 
 /* BUTTONS */
-.primary{
-display:inline-block;
-padding:12px 22px;
-margin:10px;
-border-radius:8px;
-background:#ffd700;
-color:black;
-text-decoration:none;
+.buttons a {
+text-decoration: none;
 }
 
-.secondary{
-display:inline-block;
-padding:12px 22px;
-margin:10px;
-border-radius:8px;
-border:1px solid #ffd700;
-color:#ffd700;
-text-decoration:none;
+.primary {
+display: inline-block;
+padding: 12px 22px;
+margin: 10px;
+border-radius: 8px;
+background: #ffd700;
+color: black;
+font-weight: 500;
+transition: 0.3s;
+}
+.primary:hover {
+box-shadow: 0 0 20px #ffd700;
+}
+
+.secondary {
+display: inline-block;
+padding: 12px 22px;
+margin: 10px;
+border-radius: 8px;
+border: 1px solid #ffd700;
+color: #ffd700;
+transition: 0.3s;
+}
+.secondary:hover {
+background: #ffd700;
+color: black;
 }
 
 /* SERVICES */
-.services{
-padding:60px 20px;
-text-align:center;
+.services {
+padding: 60px 20px;
+text-align: center;
 }
 
-.card{
-background:#141400;
-border:1px solid #333300;
-padding:20px;
-margin:15px auto;
-border-radius:12px;
-max-width:400px;
+.services h2 {
+margin-bottom: 30px;
+}
+
+.card {
+background: #141400;
+border: 1px solid #333300;
+padding: 20px;
+margin: 15px auto;
+border-radius: 12px;
+max-width: 400px;
+transition: 0.3s;
+}
+.card:hover {
+transform: translateY(-6px);
+box-shadow: 0 0 20px rgba(255,215,0,0.3);
 }
 
 /* TEAM */
-.team{
-text-align:center;
-padding:70px 20px;
+.team {
+text-align: center;
+padding: 70px 20px;
 }
 
-.founder-card{
-background:#141400;
-border:1px solid #333300;
-border-radius:18px;
-padding:30px 20px;
-max-width:350px;
-margin:auto;
+/* FOUNDER CARD */
+.founder-card {
+background: #141400;
+border: 1px solid #333300;
+border-radius: 18px;
+padding: 30px 20px;
+max-width: 350px;
+margin: auto;
+transition: 0.3s;
 }
 
-.founder-card img{
-width:120px;
-border-radius:50%;
-border:3px solid #ffd700;
-margin-bottom:15px;
+.founder-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
 }
 
-.role{
-color:#ffd700;
-font-size:12px;
-letter-spacing:2px;
+.founder-card img {
+width: 120px;
+border-radius: 50%;
+border: 3px solid #ffd700;
+margin-bottom: 15px;
 }
 
-.bio{
-color:#aaa;
-margin:10px 0;
+.role {
+color: #ffd700;
+font-size: 12px;
+letter-spacing: 2px;
 }
 
-.socials{
-display:flex;
-justify-content:center;
-gap:15px;
+.bio {
+color: #aaa;
+margin: 10px 0;
 }
 
-.socials a{
-background:#1a1a00;
-border:1px solid #333300;
-padding:12px;
-border-radius:50%;
-color:#ffd700;
+/* SOCIAL ICONS */
+.socials {
+display: flex;
+justify-content: center;
+gap: 15px;
 }
 
-/* ========================= */
-/* 🔥 NEW PLUTOTECH SECTION */
-/* ========================= */
-
-.pluto-section{
-padding:100px 20px;
-text-align:center;
-background:linear-gradient(180deg,#0a0000,#140000,#0a0000);
+.socials a {
+background: #1a1a00;
+border: 1px solid #333300;
+padding: 12px;
+border-radius: 50%;
+color: #ffd700;
+font-size: 18px;
+transition: 0.3s;
 }
 
-.pluto-section h2{
-font-size:38px;
-line-height:1.3;
-margin-bottom:40px;
+.socials a:hover {
+background: #ffd700;
+color: black;
+transform: scale(1.1);
 }
 
-.pluto-section h2 span{
-display:block;
+/* STATS */
+.stats {
+padding: 60px 20px;
 }
 
-/* CONTACT BUTTONS */
-.pluto-buttons{
-display:flex;
-flex-direction:column;
-gap:20px;
-max-width:400px;
-margin:0 auto;
+.box {
+background: #141400;
+padding: 25px;
+margin: 15px auto;
+border-radius: 12px;
+font-size: 28px;
+color: #ffd700;
+max-width: 400px;
+text-align: center;
 }
 
-.pluto-btn{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:12px;
-padding:16px;
-border-radius:14px;
-background:#140000;
-border:1px solid #330000;
-color:#fff;
-text-decoration:none;
-font-size:16px;
-transition:0.3s;
-}
-
-.pluto-btn:hover{
-background:#ff1a1a;
-transform:translateY(-4px);
-box-shadow:0 0 20px rgba(255,0,0,0.5);
+.box span {
+display: block;
+font-size: 14px;
+color: #aaa;
 }
 
 /* FOOTER */
-.footer-bottom{
-text-align:center;
-padding:60px 20px;
-border-top:1px solid #220000;
+.footer {
+text-align: center;
+padding: 70px 20px;
+font-size: 26px;
+color: #ffd700;
 }
 
-.footer-logo{
-font-size:26px;
-font-weight:600;
+/* CONTACT BUTTONS */
+.contact-buttons {
+display: flex;
+justify-content: center;
+gap: 15px;
+padding: 40px 20px 80px;
+flex-wrap: wrap;
 }
 
-.footer-logo span{
-color:#ff1a1a;
+.contact-btn {
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 14px 24px;
+background: #141400;
+border: 1px solid #333300;
+color: #ffd700;
+text-decoration: none;
+border-radius: 10px;
+font-size: 15px;
+transition: 0.3s;
+min-width: 160px;
+justify-content: center;
 }
 
-.footer-text{
-color:#777;
-margin-top:10px;
+.contact-btn i {
+font-size: 18px;
 }
 
-.copyright{
-color:#555;
-margin-top:20px;
-font-size:14px;
+.contact-btn:hover {
+background: #ffd700;
+color: black;
+box-shadow: 0 0 20px #ffd700;
+transform: translateY(-3px);
 }
+</style>  </head>
 
-</style>
-</head>
-
-<body>
-
-<header>
-<div class="logo">Sno<span>x</span></div>
-</header>
-
-<section class="hero">
-<p class="tag">BUILT WITH CARE. POWERED BY CODE.</p>
-<h1>Clean Code.<br><span>Real Impact.</span></h1>
-<p class="desc">
-We build websites, apps, bots, and automation tools that help your ideas grow online.
-</p>
-
-<a href="#team" class="primary">Meet Our Team →</a>
-<a href="#contact" class="secondary">Get In Touch</a>
-</section>
-
-<section class="services">
-<h2>What We Do</h2>
-
-<div class="card">
-<h3>Custom Websites</h3>
-<p>Clean, responsive websites made to fit your brand.</p>
-</div>
-
-<div class="card">
-<h3>Web Applications</h3>
-<p>Fast and reliable apps built for real users.</p>
-</div>
-
-<div class="card">
-<h3>Discord Bots</h3>
-<p>Custom bots to manage and grow your community.</p>
-</div>
-
-</section>
-
-<section class="team" id="team">
-<h2>Meet The Founders</h2>
-
-<div class="founder-card">
-  <img src="https://cdn.discordapp.com/attachments/1411311515197243425/1472178412759154728/IMG_20241103_162603_127.webp">
-
-  <h3>log8rithm</h3>
-  <p class="role">FOUNDER</p>
-
-  <p class="bio">
-    Where Python logic meets clean, modern web design.
-  </p>
-
-  <div class="socials">
-    <a href="#"><i class="fab fa-discord"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-github"></i></a>
-  </div>
-</div>
-</section>
-
-<!-- 🔥 NEW PLUTOTECH STYLE SECTION -->
-<section class="pluto-section" id="contact">
-<h2>Got an idea?<br><span>Let’s build it.</span></h2>
-
-<div class="pluto-buttons">
-
-<a href="mailto:your@email.com" class="pluto-btn">
-<i class="fas fa-envelope"></i> Email Us
-</a>
-
-<a href="https://discord.gg/" class="pluto-btn">
-<i class="fab fa-discord"></i> Message on Discord
-</a>
-
-<a href="https://wa.me/" class="pluto-btn">
-<i class="fab fa-whatsapp"></i> WhatsApp
-</a>
-
-</div>
-</section>
-
-<!-- FOOTER -->
-<div class="footer-bottom">
-<div class="footer-logo">Pluto<span>Tech</span></div>
-<p class="footer-text">Built with code. Made with purpose.</p>
-<p class="copyright">© 2025 PlutoTech. All rights reserved.</p>
-</div>
-
-</body>
+<body>  <header>      
+  <div class="logo">Sno<span>x</span></div>      
+</header>  <section class="hero">      
+  <p class="tag">BUILT WITH CARE. POWERED BY CODE.</p>      
+  <h1>Clean Code.<br><span>Real Impact.</span></h1>      
+  <p class="desc">      
+    We build websites, apps, bots, and automation tools that help your ideas grow online.      
+  </p>    <div class="buttons">      
+    <a href="#team" class="primary">Meet Our Team →</a>      
+    <a href="#contact" class="secondary">Get In Touch</a>      
+  </div>      
+</section>  <section class="services">      
+  <h2>What We Do</h2>    <div class="card">      
+    <h3>Custom Websites</h3>      
+    <p>Clean, responsive websites made to fit your brand.</p>      
+  </div>    <div class="card">      
+    <h3>Web Applications</h3>      
+    <p>Fast and reliable apps built for real users.</p>      
+  </div>    <div class="card">      
+    <h3>Discord Bots</h3>      
+    <p>Custom bots to manage, automate, and grow your community.</p>      
+  </div>      
+</section>  <section class="team" id="team">      
+  <h2>Meet The Founders</h2>    <div class="founder-card">      
+    <img src="https://cdn.discordapp.com/attachments/1411311515197243425/1472178412759154728/IMG_20241103_162603_127.webp?ex=69d1913d&is=69d03fbd&hm=3989fcfc05603d5f7aeaee795fa78a83af5db6c701076fd4f055ba3014092d6b&">  <h3>log8rithm</h3>      
+<p class="role">FOUNDER</p>    <p class="bio">      
+  Where Python logic meets clean, modern web design.      
+</p>    <div class="socials">      
+  <a href="https://discord.gg/" target="_blank"><i class="fab fa-discord"></i></a>      
+  <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>      
+  <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>      
+</div>    </div>      
+</section>  <section class="stats">      
+  <div class="box">100+<span>Projects Delivered</span></div>      
+  <div class="box">100%<span>Client Satisfaction</span></div>      
+  <div class="box">24/7<span>Support Available</span></div>      
+</section>  <section class="footer">      
+  <h2>Got an idea?<br>Let’s build it.</h2>      
+</section>  <!-- CONTACT SECTION WITH ID -->  <section class="contact-buttons" id="contact">      
+  <a href="https://instagram.com/" target="_blank" class="contact-btn">      
+    <i class="fab fa-instagram"></i> Instagram      
+  </a>    <a href="https://discord.gg/" target="_blank" class="contact-btn">      
+    <i class="fab fa-discord"></i> Discord      
+  </a>    <a href="#" class="contact-btn">      
+    <i class="fas fa-user-plus"></i> Invite Me      
+  </a>      
+</section>  <script>      
+function toggleMenu() {      
+  alert("Menu coming soon 😎");      
+}      
+</script>  </body>      
 </html>
