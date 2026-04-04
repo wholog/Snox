@@ -13,6 +13,32 @@
 
 <style>
 
+  /* REMOVE TEXT SELECTION HIGHLIGHT */
+::selection {
+  background: transparent;
+}
+
+::-webkit-selection {
+  background: transparent;
+}
+
+/* REMOVE TAP HIGHLIGHT COMPLETELY */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* REMOVE BLUE CLICK ON LINKS & BUTTONS */
+a, button, div, span {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+/* OPTIONAL: DISABLE TEXT SELECT (if you don't want selection at all) */
+body {
+  -webkit-user-select: none;
+  user-select: none;
+}
+  
   /* REMOVE BLUE TAP / CLICK EFFECT */
 * {
   -webkit-tap-highlight-color: transparent;
