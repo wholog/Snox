@@ -5,72 +5,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PlutoTech Yellow Theme</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Font Awesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
-  /* REMOVE TEXT SELECTION HIGHLIGHT */
-::selection {
-  background: transparent;
-}
-
-::-webkit-selection {
-  background: transparent;
-}
-
-/* REMOVE TAP HIGHLIGHT COMPLETELY */
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* REMOVE BLUE CLICK ON LINKS & BUTTONS */
-a, button, div, span {
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
-}
-
-/* OPTIONAL: DISABLE TEXT SELECT (if you don't want selection at all) */
-body {
-  -webkit-user-select: none;
-  user-select: none;
-}
-  
-  /* REMOVE BLUE TAP / CLICK EFFECT */
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* REMOVE FOCUS OUTLINE */
-a:focus, button:focus {
-  outline: none;
-}
-
-/* OPTIONAL: Remove highlight on active click */
-a, button {
-  -webkit-tap-highlight-color: transparent;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Space Grotesk', sans-serif;
-}
+/* REMOVE HIGHLIGHTS */
+::selection { background: transparent; }
+* { -webkit-tap-highlight-color: transparent; }
+a:focus, button:focus { outline: none; }
 
 body {
   background: #0a0a00;
   color: #fff;
   overflow-x: hidden;
+  perspective: 1200px; /* 3D ENABLE */
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-/* GRID BACKGROUND */
+/* GRID */
 body::before {
   content: "";
   position: fixed;
@@ -82,244 +35,208 @@ body::before {
   z-index: -1;
 }
 
-/* NAVBAR */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* NAV */
 header {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 25px;
-  border-bottom: 1px solid #333300;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 25px;
+  border-bottom:1px solid #333300;
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: 600;
-}
-.logo span {
-  color: #ffd700;
-}
+.logo { font-size:22px; font-weight:600; }
+.logo span { color:#ffd700; }
 
 /* HERO */
 .hero {
-  text-align: center;
-  padding: 90px 20px;
+  text-align:center;
+  padding:90px 20px;
 }
 
 .tag {
-  color: #ffd700;
-  border: 1px solid #ffd700;
-  padding: 6px 16px;
-  display: inline-block;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  font-size: 13px;
-  letter-spacing: 1px;
+  color:#ffd700;
+  border:1px solid #ffd700;
+  padding:6px 16px;
+  border-radius:20px;
+  display:inline-block;
 }
 
 .hero h1 {
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size:50px;
+  animation: float 4s ease-in-out infinite;
 }
 
-.hero h1 span {
-  color: #ccc;
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
+
+.hero h1 span { color:#ccc; }
 
 .desc {
-  margin: 20px auto;
-  color: #aaa;
-  max-width: 500px;
-  font-size: 15px;
+  margin:20px auto;
+  color:#aaa;
+  max-width:500px;
 }
 
 /* BUTTONS */
-.buttons a {
-  text-decoration: none;
+.primary, .secondary {
+  display:inline-block;
+  padding:12px 22px;
+  margin:10px;
+  border-radius:8px;
+  transition:0.3s;
 }
 
 .primary {
-  display: inline-block;
-  padding: 12px 22px;
-  margin: 10px;
-  border-radius: 8px;
-  background: #ffd700;
-  color: black;
-  font-weight: 500;
-  transition: 0.3s;
-}
-.primary:hover {
-  box-shadow: 0 0 20px #ffd700;
+  background:#ffd700;
+  color:black;
 }
 
 .secondary {
-  display: inline-block;
-  padding: 12px 22px;
-  margin: 10px;
-  border-radius: 8px;
-  border: 1px solid #ffd700;
-  color: #ffd700;
-  transition: 0.3s;
+  border:1px solid #ffd700;
+  color:#ffd700;
 }
+
+.primary:hover, .secondary:hover {
+  transform: translateY(-4px) scale(1.05);
+}
+
+.primary:active, .secondary:active {
+  transform: scale(0.95);
+}
+
 .secondary:hover {
-  background: #ffd700;
-  color: black;
+  background:#ffd700;
+  color:black;
 }
 
 /* SERVICES */
 .services {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.services h2 {
-  margin-bottom: 30px;
+  padding:60px 20px;
+  text-align:center;
 }
 
 .card {
-  background: #141400;
-  border: 1px solid #333300;
-  padding: 20px;
-  margin: 15px auto;
-  border-radius: 12px;
-  max-width: 400px;
-  transition: 0.3s;
+  background:#141400;
+  border:1px solid #333300;
+  padding:20px;
+  margin:15px auto;
+  border-radius:12px;
+  max-width:400px;
+  transform-style: preserve-3d;
+  transition:0.4s;
 }
+
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px rgba(255,215,0,0.3);
+  box-shadow:0 20px 40px rgba(255,215,0,0.25);
 }
 
 /* TEAM */
 .team {
-  text-align: center;
-  padding: 70px 20px;
+  text-align:center;
+  padding:70px 20px;
 }
 
-/* FOUNDER CARD */
 .founder-card {
-  background: #141400;
-  border: 1px solid #333300;
-  border-radius: 18px;
-  padding: 30px 20px;
-  max-width: 350px;
-  margin: auto;
-  transition: 0.3s;
+  background:#141400;
+  border:1px solid #333300;
+  border-radius:18px;
+  padding:30px;
+  max-width:350px;
+  margin:auto;
+  transform-style: preserve-3d;
+  transition:0.5s;
 }
 
 .founder-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+  box-shadow:0 25px 50px rgba(255,215,0,0.35);
 }
 
 .founder-card img {
-  width: 120px;
-  border-radius: 50%;
-  border: 3px solid #ffd700;
-  margin-bottom: 15px;
+  width:120px;
+  border-radius:50%;
+  border:3px solid #ffd700;
 }
 
-.role {
-  color: #ffd700;
-  font-size: 12px;
-  letter-spacing: 2px;
-}
+.role { color:#ffd700; }
 
-.bio {
-  color: #aaa;
-  margin: 10px 0;
-}
+.bio { color:#aaa; margin:10px 0; }
 
-/* SOCIAL ICONS */
 .socials {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
 }
 
 .socials a {
-  background: #1a1a00;
-  border: 1px solid #333300;
-  padding: 12px;
-  border-radius: 50%;
-  color: #ffd700;
-  font-size: 18px;
-  transition: 0.3s;
+  background:#1a1a00;
+  padding:12px;
+  border-radius:50%;
+  color:#ffd700;
+  transition:0.3s;
 }
 
 .socials a:hover {
-  background: #ffd700;
-  color: black;
-  transform: scale(1.1);
+  background:#ffd700;
+  color:black;
 }
 
 /* STATS */
 .stats {
-  padding: 60px 20px;
+  padding:60px 20px;
 }
 
 .box {
-  background: #141400;
-  padding: 25px;
-  margin: 15px auto;
-  border-radius: 12px;
-  font-size: 28px;
-  color: #ffd700;
-  max-width: 400px;
-  text-align: center;
-}
-
-.box span {
-  display: block;
-  font-size: 14px;
-  color: #aaa;
+  background:#141400;
+  padding:25px;
+  margin:15px auto;
+  border-radius:12px;
+  font-size:28px;
+  color:#ffd700;
+  max-width:400px;
+  text-align:center;
 }
 
 /* FOOTER */
 .footer {
-  text-align: center;
-  padding: 70px 20px;
-  font-size: 26px;
-  color: #ffd700;
+  text-align:center;
+  padding:70px 20px;
+  font-size:26px;
+  color:#ffd700;
 }
 
-/* CONTACT BUTTONS */
+/* CONTACT */
 .contact-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  padding: 40px 20px 80px;
-  flex-wrap: wrap;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  padding:40px 20px;
+  flex-wrap:wrap;
 }
 
 .contact-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 24px;
-  background: #141400;
-  border: 1px solid #333300;
-  color: #ffd700;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 15px;
-  transition: 0.3s;
-  min-width: 160px;
-  justify-content: center;
-}
-
-.contact-btn i {
-  font-size: 18px;
+  padding:14px 24px;
+  background:#141400;
+  border:1px solid #333300;
+  color:#ffd700;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  transition:0.3s;
 }
 
 .contact-btn:hover {
-  background: #ffd700;
-  color: black;
-  box-shadow: 0 0 20px #ffd700;
-  transform: translateY(-3px);
+  background:#ffd700;
+  color:black;
+  transform:translateY(-3px);
 }
-</style>
 
+</style>
 </head>
+
 <body>
 
 <header>
@@ -329,85 +246,70 @@ header {
 <section class="hero">
   <p class="tag">BUILT WITH CARE. POWERED BY CODE.</p>
   <h1>Clean Code.<br><span>Real Impact.</span></h1>
-  <p class="desc">
-    We build websites, apps, bots, and automation tools that help your ideas grow online.
-  </p>
+  <p class="desc">We build websites, apps, bots, and automation tools.</p>
 
-  <div class="buttons">
-    <a href="#team" class="primary">Meet Our Team →</a>
-    <a href="#contact" class="secondary">Get In Touch</a>
-  </div>
+  <a href="#team" class="primary">Meet Our Team</a>
+  <a href="#contact" class="secondary">Get In Touch</a>
 </section>
 
 <section class="services">
   <h2>What We Do</h2>
 
-  <div class="card">
-    <h3>Custom Websites</h3>
-    <p>Clean, responsive websites made to fit your brand.</p>
-  </div>
-
-  <div class="card">
-    <h3>Web Applications</h3>
-    <p>Fast and reliable apps built for real users.</p>
-  </div>
-
-  <div class="card">
-    <h3>Discord Bots</h3>
-    <p>Custom bots to manage, automate, and grow your community.</p>
-  </div>
+  <div class="card"><h3>Custom Websites</h3></div>
+  <div class="card"><h3>Web Applications</h3></div>
+  <div class="card"><h3>Discord Bots</h3></div>
 </section>
 
 <section class="team" id="team">
   <h2>Meet The Founders</h2>
 
   <div class="founder-card">
-    <img src="https://cdn.discordapp.com/attachments/1411311515197243425/1472178412759154728/IMG_20241103_162603_127.webp?ex=69d1913d&is=69d03fbd&hm=3989fcfc05603d5f7aeaee795fa78a83af5db6c701076fd4f055ba3014092d6b&">
-    
+    <img src="https://cdn.discordapp.com/attachments/1411311515197243425/1472178412759154728/IMG_20241103_162603_127.webp">
     <h3>log8rithm</h3>
     <p class="role">FOUNDER</p>
-
-    <p class="bio">
-      Where Python logic meets clean, modern web design.
-    </p>
+    <p class="bio">Python + Web Design</p>
 
     <div class="socials">
-      <a href="https://discord.gg/" target="_blank"><i class="fab fa-discord"></i></a>
-      <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-discord"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
     </div>
   </div>
 </section>
 
 <section class="stats">
-  <div class="box">100+<span>Projects Delivered</span></div>
-  <div class="box">100%<span>Client Satisfaction</span></div>
-  <div class="box">24/7<span>Support Available</span></div>
+  <div class="box">100+<span>Projects</span></div>
+  <div class="box">100%<span>Satisfaction</span></div>
+  <div class="box">24/7<span>Support</span></div>
 </section>
 
 <section class="footer">
-  <h2>Got an idea?<br>Let’s build it.</h2>
+  <h2>Got an idea? Let’s build it.</h2>
 </section>
 
-<!-- CONTACT SECTION WITH ID -->
 <section class="contact-buttons" id="contact">
-  <a href="https://instagram.com/" target="_blank" class="contact-btn">
-    <i class="fab fa-instagram"></i> Instagram
-  </a>
-
-  <a href="https://discord.gg/" target="_blank" class="contact-btn">
-    <i class="fab fa-discord"></i> Discord
-  </a>
-
-  <a href="#" class="contact-btn">
-    <i class="fas fa-user-plus"></i> Invite Me
-  </a>
+  <a href="#" class="contact-btn"><i class="fab fa-instagram"></i>Instagram</a>
+  <a href="#" class="contact-btn"><i class="fab fa-discord"></i>Discord</a>
 </section>
 
+<!-- 3D MOUSE EFFECT -->
 <script>
-function toggleMenu() {
-  alert("Menu coming soon 😎");
-}
+document.querySelectorAll('.card, .founder-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const rotateY = ((x / rect.width) - 0.5) * 20;
+    const rotateX = ((y / rect.height) - 0.5) * -20;
+
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+  });
+});
 </script>
 
 </body>
